@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 05 Workspace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 800px;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 50px;
+            height: 50px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .quick-links, .about, .tools, .interpretation-tools {
+            margin-bottom: 20px;
+        }
+        .quick-links h2, .interpretation-tools h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .quick-links ul, .interpretation-tools ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .quick-links ul li, .interpretation-tools ul li {
+            margin-bottom: 10px;
+        }
+        .quick-links ul li a, .tools .tool-item a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .quick-links ul li a:hover, .tools .tool-item a:hover {
+            text-decoration: underline;
+        }
+        .tools {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .tools .tool-item {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        .tools .tool-item a {
+            display: block;
+            margin-top: 10px;
+            color: #1a73e8;
+        }
+        .password-protect {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .password-protect input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .password-protect button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #1a73e8;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+        }
+        .password-protect button:hover {
+            background-color: #1662c4;
+        }
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="password-protect" class="password-protect">
+            <h2>Enter Password to Access</h2>
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+        <div id="content">
+            <div class="header">
+                <img src="https://via.placeholder.com/50" alt="Profile">
+                <h1>Team 05 Workspace</h1>
+            </div>
+            <div class="quick-links">
+                <h2>Quick links</h2>
+                <ul>
+                    <li><strong>QUICK LINKS</strong></li>
+                    <li><a href="https://sven.stratusvideo.com/iws/login" target="_blank">IWS INTERPRETER WORK STATION</a></li>
+                    <li><a href="http://iccbposv.slack.com/" target="_blank">SLACK</a></li>
+                    <li><a href="https://webmail.iccbpohn.com/" target="_blank">WEBMAIL</a></li>
+                    <li><a href="https://iccbpo.bamboohor.com/login.php?r=%2Fhome" target="_blank">BAMBOO</a></li>
+                    <li><a href="https://login.calabriocloud.com/?realm=/bravo#/" target="_blank">CALABRIO</a></li>
+                </ul>
+            </div>
+            <div class="about">
+                <p>The document provides quick links for Team 05, including IWS Interpreter Work Station, Slack, Webmail, Bamboo, Calabrio, interpretation tools, terminology, scripts, reports, and skills information.</p>
+            </div>
+            <div class="tools">
+                <div class="tool-item">
+                    <strong>Linguee</strong>
+                    <a href="https://www.linguee.com" target="_blank">https://www.linguee.com</a>
+                </div>
+                <div class="tool-item">
+                    <strong>Chat gpt</strong>
+                    <a href="https://chatgpt.com" target="_blank">https://chatgpt.com</a>
+                </div>
+                <div class="tool-item">
+                    <strong>Notion</strong>
+                    <a href="https://notion.so" target="_blank">https://notion.so</a>
+                </div>
+            </div>
+            <div class="interpretation-tools">
+                <h2>Interpretation tools</h2>
+                <ul>
+                    <li><strong>USEFUL TERMINOLOGY</strong></li>
+                    <li><strong>SCRIPTS</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "ICCBPO") {
+                document.getElementById("password-protect").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
